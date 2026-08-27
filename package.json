@@ -1,0 +1,7 @@
+{
+  "name": "nik-parser-cli",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "bin": { "nik-parser": "./cli.js" }
+}
