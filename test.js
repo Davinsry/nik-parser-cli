@@ -20,6 +20,15 @@ assert.equal(parseNIK("3175034503920001").tanggalLahir, "1992-03-05");
 // Tahun 2 digit: 05 <= abad ini -> 2005
 assert.equal(parseNIK("3175030503050001").tanggalLahir, "2005-03-05");
 
+// Kode provinsi Papua mengikuti Kemendagri, bukan BPS
+assert.equal(parseNIK("9171030503920001").provinsi, "Papua");
+assert.equal(parseNIK("9271030503920001").provinsi, "Papua Barat");
+assert.equal(parseNIK("9371030503920001").provinsi, "Papua Selatan");
+assert.equal(parseNIK("9471030503920001").provinsi, "Papua Tengah");
+assert.equal(parseNIK("9571030503920001").provinsi, "Papua Pegunungan");
+assert.equal(parseNIK("9671030503920001").provinsi, "Papua Barat Daya");
+assert.equal(parseNIK("9771030503920001").provinsi, null);
+
 // Kode provinsi tak dikenal -> null, bukan lempar error
 assert.equal(parseNIK("9975030503920001").provinsi, null);
 

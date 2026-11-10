@@ -1,7 +1,6 @@
 // Kode provinsi mengikuti Kepmendagri 050-145/2022 (38 provinsi).
-// ponytail: legacy NIK Papua pakai kode lama (91=Papua, 92=Papua Barat) yang
-// bentrok dengan kode baru. Pakai kode baru; tambah flag `legacyPapua` kalau ada
-// yang komplain.
+// Kode Papua di NIK tidak berubah (91=Papua, 92=Papua Barat); provinsi baru
+// mendapat 93-96. Urutan BPS (94=Papua, 97) tidak dipakai di NIK.
 const PROVINSI = {
   11: "Aceh",
   12: "Sumatera Utara",
@@ -35,12 +34,12 @@ const PROVINSI = {
   76: "Sulawesi Barat",
   81: "Maluku",
   82: "Maluku Utara",
-  91: "Papua Barat",
-  92: "Papua Barat Daya",
-  94: "Papua",
-  95: "Papua Selatan",
-  96: "Papua Tengah",
-  97: "Papua Pegunungan",
+  91: "Papua",
+  92: "Papua Barat",
+  93: "Papua Selatan",
+  94: "Papua Tengah",
+  95: "Papua Pegunungan",
+  96: "Papua Barat Daya",
 };
 
 /**
